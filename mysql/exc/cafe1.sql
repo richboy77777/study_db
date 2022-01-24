@@ -39,4 +39,3 @@ COLLATE = utf8mb4_unicode_ci
 COMMENT = '카페'
 
 
-select * from cafe1;
