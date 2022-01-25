@@ -24,6 +24,8 @@ create table member2 (
 
 drop table member2;
 drop table member;
+drop table musicroom;
+drop table musicroom;
 
 -- 테이블 추가
 
