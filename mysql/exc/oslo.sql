@@ -2,6 +2,29 @@ use world;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
+drop table oslomember;
+
+CREATE TABLE IF NOT EXISTS `oslomember` (
+  `seq` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `image` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `id` VARCHAR(45) NULL,
+  `password` VARCHAR(100) NULL,
+  `genderCd` INT NULL,
+  `dob` DATE NULL,
+  `nationalityCd` INT NULL,
+  `maritalstatusCd` INT NULL,
+  `weddinganniversary` DATE NULL,
+  `havingchildren` INT NULL,
+  `aboutmyself` VARCHAR(100) NULL,
+  `nickname` VARCHAR(45) NULL,
+  `favoritecolor` VARCHAR(45) NULL,
+  `recommenderseq` INT NULL,
+  `periodnumberCd` INT NULL,
+  PRIMARY KEY (`seq`))
+ENGINE = InnoDB
+;
+
 insert into oslomember ( 
 seq
 , image
@@ -11,14 +34,14 @@ seq
 , genderCd
 , dob
 , nationalityCd
-, maritalstatus
+, maritalstatusCd
 , weddinganniversary
 , havingchildren
 , aboutmyself
 , nickname
 , favoritecolor
 , recommenderseq
-, periodnumber
+, periodnumberCd
 ) values (
 1
 , 'tomtom'
@@ -30,7 +53,7 @@ seq
 , 1
 , 1
 , '2020-01-01'
-, 2
+, 1
 , '안녕하세요이상원입니다'
 , '프로그래머'
 , '민트색'
@@ -208,15 +231,21 @@ dseq
 , dname
 , codegroup_gseq
 ) values (
-1
-, ''
-, 1
+65
+, '쉐프'
+, 19
 );
 
 select * from codeaa;
 
-
-
+select
+a.gseq
+,a.gname
+,b.dseq
+,b.dname
+from codegroupaa a
+-- left join dseq b on b.codegroup_gseq = a.gseq
+;
 
 
 

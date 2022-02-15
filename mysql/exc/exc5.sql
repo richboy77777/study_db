@@ -44,8 +44,9 @@ name
 );
 
 select * from book6;
-select * from writer;
 select * from book6_writer;
+select * from writer;
+
 
 insert into book6_writer (
 book6_no
